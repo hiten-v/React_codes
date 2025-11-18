@@ -6,9 +6,9 @@ const Dashboard = (props)=>{
     console.log(skills)
     return (
         <>
-            <div class="p-2 m-2 flex flex-col text-center bg-amber-400 rounded-xl">
-                <h1 class="text-2xl ">This is User DashBoard</h1>
-                <div class="flex flex-col gap-4">
+            <div className="p-2 m-2 flex flex-col text-center bg-amber-400 rounded-xl">
+                <h1 className="text-2xl ">This is User DashBoard</h1>
+                <div className="flex flex-col gap-4">
                     <div>User name : {name}</div>
                     <div>User age : {age}</div>
                     {/* <div>Skills : {skills.map}</div> */}

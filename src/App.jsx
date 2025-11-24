@@ -5,6 +5,7 @@ import Togglebtn from './component/togglebtn'
 import Dashboard from './component/Dashboard'
 import Input from './component/Input'
 import UseRef from "./component/UseRef";
+import ImageZoomViewer from './component/ImageZoomViewer'
 function App() {
   const [count, setCount] = useState(0) //here it is destructing of useState which accepts a variable and setter func 
 
@@ -54,6 +55,9 @@ function App() {
         <Togglebtn> </Togglebtn> 
         <Input/>
         <UseRef/>
+        <div className="p-2 m-2 ">
+          <ImageZoomViewer src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"/>
+        </div>
       </div>
     </>
   )

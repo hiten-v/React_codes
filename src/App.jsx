@@ -6,13 +6,14 @@ import Dashboard from './component/Dashboard'
 import Input from './component/Input'
 import UseRef from "./component/UseRef";
 import ImageZoomViewer from './component/ImageZoomViewer'
+import { AuthProvider } from "./component/AuthContext";
 function App() {
   const [count, setCount] = useState(0) //here it is destructing of useState which accepts a variable and setter func 
 
-    //useEffect takes 2 args {} func & [] dependency array
-    //mounting -> when DOM is created first time and appear on screen when creaation or component insetion
-    //updating ->Component re-renders when state/props change
-    //un-mounting -> delete the component
+    // useEffect takes 2 args {} func & [] dependency array
+    // mounting -> when DOM is created first time and appear on screen when creaation or component insetion
+    // updating ->Component re-renders when state/props change
+    // un-mounting -> delete the component
 
   useEffect(()=>{
     console.log("Component Mounted");
@@ -23,12 +24,14 @@ function App() {
     age:21,
     skills: ["java","js","react","node"]
   };
+
   return (
     <>
       <div>
         <div className="bg-linear-to-r from-indigo-400 to-green-400 p-2 rounded-xl">
           This is my new heading
         </div>
+
 
         <div className="flex flex-col p-2 m-2 justify-center">
           <div className="flex justify-center gap-2"> 
@@ -48,17 +51,21 @@ function App() {
           </div>
         </div>
         
-        <Home information={info}></Home>
+        {/* <Home information={info}></Home> */}
         
-        <Dashboard information={info}></Dashboard> 
+        {/* <Dashboard information={info}></Dashboard>  */}
 
         <Togglebtn> </Togglebtn> 
         <Input/>
         <UseRef/>
         <div className="p-2 m-2 ">
           <ImageZoomViewer src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"/>
-        </div>
-      </div>
+        </div> 
+      </div> 
+      <AuthProvider>
+          <Home />
+      </AuthProvider>
+
     </>
   )
 }

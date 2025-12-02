@@ -7,6 +7,9 @@ import Input from './component/Input'
 import UseRef from "./component/UseRef";
 import ImageZoomViewer from './component/ImageZoomViewer'
 import { AuthProvider } from "./component/AuthContext";
+import Counter from './component/Counter';
+import CalculatorUseReducer from './component/CalculatorUseReducer'
+import CustomHook from './component/CustomHook'
 function App() {
   const [count, setCount] = useState(0) //here it is destructing of useState which accepts a variable and setter func 
 
@@ -65,7 +68,9 @@ function App() {
       <AuthProvider>
           <Home />
       </AuthProvider>
-
+      <Counter></Counter>
+      <CalculatorUseReducer></CalculatorUseReducer>
+      <CustomHook></CustomHook>
     </>
   )
 }
